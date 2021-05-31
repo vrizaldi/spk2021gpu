@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/595d140dbd.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.1/dist/chart.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <h1 class="text-center">SPK Pemilihan Komponen GPU Komputer</h1>
+    <p class="text-center">M. Verdy Rizaldi N. (18/427585/PA/18545)<br>Thariq Izkandar Z.M.P (18/424198/PA/18303)</p>
+    <div id="alternative-input">
+      <h2>Input Alternatif</h1>
+      <div id="alternative-buttons">
+        <button class="btn btn-primary" type="button" onclick="appendAlternative()">+</button>
+        <button class="btn btn-danger" type="button" onclick="popAlternative()">-</button>
+      </div>
+      <table class="table" id="alternative-table">
+        <thead id="alternative-table-head">
+          <tr>
+            <th scope="col">Nama</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Merk</th>
+            <th scope="col">Garansi</th>
+            <th scope="col"><i>Clock Speed</i></th>
+            <th scope="col">FLOPS</th>
+            <th scope="col">VRAM</th>
+            <th scope="col"><i>Pixel Rate</i></th>
+            <th scope="col"><i>Texture Rate</i></th>
+            <th scope="col"><i>Max. Memory Bandwitdh</i></th>
+            <th scope="col">Versi DirectX</th>
+          </tr>
+        </thead>
+        <tbody id="alternative-table-body">
+          <tr id="alternative__no-0">
+            <td>
+              <input type="text" id="alternative__nama--0" value="Opsi 0">
+            </td>
+            <td>
+              <input type="number" id="alternative__harga--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__merk--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__garansi--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__clock-speed--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__flops--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__vram--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__pixel-rate--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__texture-rate--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__bandwidth--0" value="0">
+            </td>
+            <td>
+              <input type="number" id="alternative__directx--0" value="0">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Input Bobot</h2>
+      <table class="table" id="weight-table">
+        <thead id="weight-table-head">
+          <tr>
+            <th scope="col">Harga</th>
+            <th scope="col">Merk</th>
+            <th scope="col">Garansi</th>
+            <th scope="col"><i>Clock Speed</i></th>
+            <th scope="col">FLOPS</th>
+            <th scope="col">VRAM</th>
+            <th scope="col"><i>Pixel Rate</i></th>
+            <th scope="col"><i>Texture Rate</i></th>
+            <th scope="col"><i>Max. Memory Bandwitdh</i></th>
+            <th scope="col">Versi DirectX</th>
+          </tr>
+        </thead>
+        <tbody id="weight-table-body">
+          <tr>
+            <td>
+              <input type="number" id="weight__harga" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__merk" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__garansi" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__clock-speed" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__flops" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__vram" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__pixel-rate" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__texture-rate" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__bandwidth" value="1">
+            </td>
+            <td>
+              <input type="number" id="weight__directx" value="1">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-success" onclick="calculateTOPSIS()">Hitung</i></button>
+    </div>
+
+    <div id="final-solution">
+      <!-- Tambahin grafik  -->
+    </div>
+  </body>
+</html>
